@@ -2,7 +2,7 @@ Feature: Login Feature
   @happyScenarios
   Scenario: Login with valid credentials
     Given User is on login page
-    When User enters valid username and password
+    When User enters valid email and password
     Then User should be logged in successfully
 
 

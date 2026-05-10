@@ -16,11 +16,15 @@ public class HeaderBar {
     private WebDriver driver;
     private ElementWaitUtility elementWaitUtility;
 
+
     private final By websiteLogoLink = By.cssSelector("img[alt='Tricentis Demo Web Shop']");
-    private final By loginLink = By.linkText("Log in");
+    private final By loginLink = By.cssSelector(".header-links a[href='/login']");
+    private final By registerLink = By.cssSelector(".header-links a[href='/register']");
     private By logoutLink = By.linkText("Log out");
+    private By cartLink = By.cssSelector(".header-links #topcartlink .cart-label");
     private final By searchBox = By.xpath("//input[@value='Search store']");
     private final By searchButton = By.xpath("//input[@value='Search']");;
+
 
     public HeaderBar(WebDriver driver) {
         this.driver = driver;
